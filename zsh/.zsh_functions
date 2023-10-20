@@ -1,0 +1,11 @@
+function k8s_vanguard_exec() {
+    kubectl -n vanguard exec -it "$1" -- bash
+}
+
+function k8s_vanguard_restart() {
+    K8S_DEPLOYMENTS=$(kubectl get deploy -l release=vanguard -n "$1" --no-headers -o custom-columns='name:.metadata.name')
+
+    while read K8S_DEPLOYMENT; do
+        kubectl rollout restart deployment "$K8S_DEPLOYMENT";
+    done <<< "$K8S_DEPLOYMENTS"
+}

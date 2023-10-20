@@ -1,0 +1,35 @@
+global:
+  checkNewVersion: false
+  sendAnonymousUsage: false
+
+log:
+  filePath: "/var/log/traefik/main.log"
+  level: "ERROR"
+  format: json
+
+experimental:
+  http3: false
+
+entryPoints:
+  http:
+    address: ":80"
+    forwardedHeaders:
+      insecure: true
+  https:
+    address: ":443"
+    http:
+      tls: {}
+
+providers:
+  docker:
+    endpoint: "unix:///var/run/docker.sock"
+    exposedByDefault: false
+    network: "traefik"
+  file:
+    filename: /etc/traefik/config.yml
+    watch: true
+
+api:
+  dashboard: true
+  insecure: true
+  debug: true

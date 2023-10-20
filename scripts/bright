@@ -1,0 +1,32 @@
+#!/usr/bin/sh
+
+# Easter egg.
+# 29782 equals "brght"
+# b = 2d letter;
+# r = 18 = 1 + 8 = 9;
+# g = 7;
+# h = 8;
+# t = 20 = 2 + 0 = 2.
+export APP_PORT=29782
+
+CURRENT_IP=$(ipconfig getifaddr en0 | xargs)
+LEVEL="${1:-0}"
+IPS=$(
+  ssh admin@192.168.0.1 -p2995 \
+    "/ip/arp/print without-paging proplist=address where disabled=no invalid=no" \
+  | awk '{print $3}' \
+  | grep -oE '192.168.0.\d+' \
+  | sort -t . -n -k 4
+)
+
+while read -r IP;
+do
+  IP=$(echo "$IP" | xargs)
+
+  if [ "$CURRENT_IP" = "$IP" ]; then
+    continue
+  fi
+
+  echo "Pinging: $IP"
+  curl -X GET --connect-timeout 10 -m 30 "$IP:$APP_PORT/?level=$LEVEL" >> /dev/null 2>&1 &
+done <<< "$IPS"

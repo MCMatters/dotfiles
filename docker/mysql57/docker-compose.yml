@@ -1,0 +1,20 @@
+version: "3.9"
+
+services:
+  mysql57:
+    image: mysql:5.7
+    container_name: mysql57
+    hostname: mysql57
+    env_file:
+      - .docker.env
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./data:/var/lib/mysql:delegated
+      - ./config/mysql.cnf:/etc/mysql/conf.d/custom.cnf
+      - ./logs:/logs
+
+networks:
+  default:
+    external: true
+    name: mysql

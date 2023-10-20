@@ -1,0 +1,20 @@
+version: "3.9"
+
+services:
+  mysql80:
+    image: mysql:8.0
+    container_name: mysql80
+    hostname: mysql80
+    env_file:
+      - .docker.env
+    ports:
+      - "33060:3306"
+    volumes:
+      - ./data:/var/lib/mysql:delegated
+      - ./config/mysql.cnf:/etc/mysql/conf.d/custom.cnf
+      - ./logs:/logs
+
+networks:
+  default:
+    external: true
+    name: mysql

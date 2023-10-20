@@ -1,0 +1,61 @@
+# Composer
+alias c='docker run --rm -it -v $PWD:/app -v shared_composer_cache:/cache/.composer composer:latest composer'
+alias ci="c install"
+alias cu="c update"
+alias cr="c require"
+alias crm="c remove"
+alias cdu="c dumpautoload"
+
+# Node
+alias dnode='docker run --rm -it -w=/app -v $PWD:/app:cached node:20'
+alias dnpm="dnode npm"
+alias dyarn="dnode yarn"
+
+# Docker
+alias d="docker"
+alias de="docker exec -it"
+alias dc="docker compose"
+alias dcu="docker compose up -d"
+alias dcub="docker compose up --build -d"
+alias dcs="docker compose stop"
+alias dcd="docker compose down"
+alias dcr="docker compose restart"
+alias dcsu="docker compose -f docker-compose.shared.yml up -d"
+alias dcss="docker compose -f docker-compose.shared.yml stop"
+alias dcsr="docker compose -f docker-compose.shared.yml restart"
+alias dcsd="docker compose -f docker-compose.shared.yml down"
+alias dps='docker ps --format "table {{.ID}}:\t{{.Image}}\t{{.State}}\t{{.Names}}"'
+
+# K8S
+alias kvge="k8s_vanguard_exec"
+alias kvgp="kubectl -n vanguard get pods"
+alias kvr="k8s_vanguard_restart vanguard"
+alias kvrr="k8s_vanguard_restart review-apps"
+
+# Dev
+alias dev-up="sh ~/.dotfiles/docker/dev-up.sh"
+alias dev-stop="sh ~/.dotfiles/docker/dev-stop.sh"
+
+# Git
+alias gf="git fetch --all -p --tags"
+alias gm="git merge"
+alias gl="git pull"
+alias gp="git push"
+alias gpt="git push --tags"
+alias gc="git checkout"
+
+# PhpStorm
+alias pstorm='open -na "Phpstorm.app" --args $PWD'
+
+# Terraform
+alias t="terraform"
+alias ta="terraform apply"
+alias tp="terraform plan"
+
+# Custom
+alias myip="curl ifconfig.me; echo"
+alias tbf="sudo pkill TouchBarServer && killall ControlStrip"
+
+alias bup="sh ~/.scripts/bright 100"
+alias bdown="sh ~/.scripts/bright 0"
+alias fractal-pon="wakeonlan 08:BF:B8:16:AA:E5"

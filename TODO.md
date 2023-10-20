@@ -1,0 +1,8 @@
+- [ ] Add installer for dot files (moving/copying files)
+- [ ] Add vim config
+- [ ] Review and add PhpStorm/Goland/Visual Code configs
+- [ ] Add Ubuntu configs
+- [ ] Secure sharing SequelAce config
+- [ ] Secure sharing Winbox config
+- [ ] Setup (submodule or maybe as encrypted here) ssh/gpg configs
+- [ ] WireGuard

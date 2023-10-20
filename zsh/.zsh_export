@@ -1,0 +1,12 @@
+export ZSH="~/.oh-my-zsh"
+export ZSH_THEME="geoffgarside"
+export DISABLE_UPDATE_PROMPT=true
+export DISABLE_AUTO_UPDATE=true
+
+export GOPATH=$HOME/.golang
+
+export CLOUDSDK_PYTHON=python3
+export GPG_TTY=$(tty)
+export USE_GKE_GCLOUD_AUTH_PLUGIN=True
+
+export PATH="$HOME/.krew/bin:/usr/local/opt/php@8.1/bin:/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/bin:/usr/local/sbin:$PATH"

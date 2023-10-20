@@ -1,0 +1,43 @@
+[alias]
+	st = status
+	co = checkout
+	ci = commit
+	st = status
+	br = branch
+	type = cat-file -t
+	dump = cat-file -p
+	chp = cherry-pick
+	hist = !git --no-pager log --oneline
+	brc = rev-parse --abbrev-ref HEAD
+	sc = !git --no-pager diff --name-only --diff-filter=U
+
+[user]
+	name = Dmitry Borzyonok
+	email = dima.matters@gmail.com
+	signingkey = B54A464B984E4F67DA724939805529BC62539C03
+
+[core]
+	editor = vim
+	autocrlf = input
+	pager = cat
+	excludesFile = ~/.gitignore
+
+[init]
+	defaultBranch = main
+
+[color "status"]
+	added = green bold
+	changed = red bold
+	untracked = magenta bold
+
+[pull]
+	rebase = false
+
+[commit]
+	gpgsign = true
+
+[push]
+	autoSetupRemote = true
+
+[gpg]
+	program = gpg
