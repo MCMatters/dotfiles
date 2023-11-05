@@ -1,0 +1,16 @@
+[:b1dcc9dd-5262-4d8d-a863-c897e6d979b9]
+background-color='rgb(6,25,35)'
+bold-color='rgb(255,233,213)'
+bold-color-same-as-fg=false
+bold-is-bright=true
+cursor-background-color='rgb(254,175,60)'
+cursor-colors-set=true
+cursor-foreground-color='rgb(6,24,34)'
+font='Monospace 16'
+foreground-color='rgb(90,106,134)'
+highlight-colors-set=false
+palette=['rgb(29,72,95)', 'rgb(219,102,45)', 'rgb(255,255,255)', 'rgb(254,175,60)', 'rgb(37,90,98)', 'rgb(119,219,244)', 'rgb(95,177,194)', 'rgb(229,196,158)', 'rgb(84,93,101)', 'rgb(221,153,138)', 'rgb(115,157,168)', 'rgb(254,218,174)', 'rgb(12,199,227)', 'rgb(198,232,241)', 'rgb(0,208,255)', 'rgb(255,232,214)']
+use-system-font=false
+use-theme-colors=false
+use-theme-transparency=true
+visible-name='matters'
