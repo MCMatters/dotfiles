@@ -5,6 +5,7 @@ String path = _editor.getVirtualFile()
 
 String filename = _editor.getVirtualFile()
     .getNameWithoutExtension()
+    .replaceAll(/Command$/, "")
     .replaceAll(/([A-Z])/, /-$1/)
     .toLowerCase()
     .replaceAll(/^-/, "");
