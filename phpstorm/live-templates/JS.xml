@@ -1,0 +1,29 @@
+<templateSet group="[Custom] JS">
+    <template name="ce" value="console.error($EXPRESSION$);" description="console.error" toReformat="false" toShortenFQNames="true">
+        <variable name="EXPRESSION" expression="" defaultValue="" alwaysStopAt="true" />
+        <context>
+            <option name="JAVA_SCRIPT" value="true" />
+        </context>
+    </template>
+    <template name="cl" value="console.log($EXPRESSION$);" description="console.log" toReformat="false" toShortenFQNames="true">
+        <variable name="EXPRESSION" expression="" defaultValue="" alwaysStopAt="true" />
+        <context>
+            <option name="JAVA_SCRIPT" value="true" />
+        </context>
+    </template>
+    <template name="vbm" value="&lt;template&gt;&#10;  &lt;b-modal id=&quot;$ID$&quot;&gt;&#10;    $END$&#10;  &lt;/b-modal&gt;&#10;&lt;/template&gt;&#10;&#10;&lt;script&gt;&#10;export default {&#10;  &#10;};&#10;&lt;/script&gt;&#10;" description="Vue Bootstrap modal" toReformat="false" toShortenFQNames="true">
+        <variable name="ID" expression="" defaultValue="" alwaysStopAt="true" />
+        <context>
+            <option name="JAVA_SCRIPT" value="true" />
+            <option name="Vue" value="true" />
+        </context>
+    </template>
+    <template name="bvm" value="&lt;b-modal id=&quot;$ID$&quot;&gt;&#10;  $END$&#10;&lt;/b-modal&gt;" description="Bootstrap Vue Modal" toReformat="false" toShortenFQNames="true">
+        <variable name="ID" expression="" defaultValue="" alwaysStopAt="true" />
+        <context>
+            <option name="JAVA_SCRIPT" value="true" />
+            <option name="TypeScript" value="true" />
+            <option name="Vue" value="true" />
+        </context>
+    </template>
+</templateSet>
