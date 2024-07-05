@@ -56,6 +56,10 @@ alias tp="terraform plan"
 alias myip="curl ifconfig.me; echo"
 alias tbf="sudo pkill TouchBarServer && killall ControlStrip"
 
-alias bup="sh ~/.scripts/bright 100"
-alias bdown="sh ~/.scripts/bright 0"
-alias fractal-pon="wakeonlan 08:BF:B8:16:AA:E5"
+alias bup='sh "$HOME/.scripts/bright 100"'
+alias bdown='sh "$HOME/.scripts/bright 0"'
+
+alias fractal-on="wakeonlan 08:BF:B8:16:AA:E5"
+alias fractal-off='ssh fractal '\''sudo shutdown -h now'\'
+alias violin-on="wakeonlan 74:56:3C:4E:9D:CE"
+alias violin-off='ssh violin '\''sudo shutdown -h now'\'

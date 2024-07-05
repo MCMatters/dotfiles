@@ -7,7 +7,7 @@
 # g = 7;
 # h = 8;
 # t = 20 = 2 + 0 = 2.
-export APP_PORT=29782
+APP_PORT=29782
 
 CURRENT_IP=$(ipconfig getifaddr en0 | xargs)
 LEVEL="${1:-0}"
