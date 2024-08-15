@@ -20,6 +20,8 @@ brew install ca-certificates
 brew install coreutils
 brew install curl
 brew install dnsmasq
+brew install eza
+brew install ffmpeg
 brew install gnupg
 brew install go
 brew install htop
@@ -45,13 +47,15 @@ brew install yt-dlp
 brew install zsh
 
 # Casks
+brew install --cask alacritty
 brew install --cask appcleaner
 brew install --cask betterdisplay
 brew install --cask elmedia-player
 brew install --cask firefox
+brew install --cask font-sauce-code-pro-nerd-font
 brew install --cask google-chrome
 brew install --cask google-cloud-sdk
-brew install --cask iterm2
+brew install --cask hammerspoon
 brew install --cask jetbrains-toolbox
 brew install --cask keka
 brew install --cask macpass

@@ -1,0 +1,41 @@
+import = ["~/.alacritty/themes/Ukraine.toml"]
+
+[env]
+TERM = "xterm-256color"
+
+[window]
+position.x = 0
+position.y = 0
+
+padding.x = 10
+padding.y = 10
+
+#decorations = "Buttonless"
+decorations_theme_variant = "Dark"
+
+dimensions.columns = 150
+dimensions.lines = 25
+
+[font]
+size = 18.0
+
+[font.bold]
+family = "SauceCodePro NF"
+style = "Bold"
+
+[font.bold_italic]
+family = "SauceCodePro NF"
+style = "Bold Italic"
+
+[font.italic]
+family = "SauceCodePro NF"
+style = "Italic"
+
+[font.normal]
+family = "SauceCodePro NF"
+style = "Regular"
+
+[keyboard]
+bindings = [
+  { "key" = "K", "mods" = "Command", "chars" = "\\033c" }
+]

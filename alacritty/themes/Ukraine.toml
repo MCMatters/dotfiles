@@ -1,0 +1,34 @@
+# Colors (Ukraine)
+
+[colors.bright]
+black = '#505354'
+blue = '#5bc4e0'
+cyan = '#5ecdfa'
+green = '#fff27d'
+magenta = '#cde7f0'
+red = '#d39c8d'
+white = '#dadbd6'
+yellow = '#feed6c'
+
+[colors.cursor]
+cursor = '#fcef0c'
+text = '#000000'
+
+[colors.normal]
+black = '#1b1d1e'
+blue = '#2d78a1'
+#blue = '#335860'
+cyan = '#69bbd1'
+green = '#c8be46'
+magenta = '#8fd8f0'
+red = '#f78820'
+white = '#c6c5bf'
+yellow = '#f4fd22'
+
+[colors.primary]
+background = '#0b1922'
+foreground = '#5d6983'
+
+[colors.selection]
+background = '#4d504c'
+text = '#f0e04a'
