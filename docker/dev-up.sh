@@ -4,6 +4,8 @@
 docker network create --driver=bridge --attachable --internal=false mysql >> /dev/null 2>&1
 docker network create --driver=bridge --attachable --internal=false traefik >> /dev/null 2>&1
 docker network create --driver=bridge --attachable --internal=false mongodb >> /dev/null 2>&1
+docker network create --driver=bridge --attachable --internal=false elasticsearch >> /dev/null 2>&1
+docker network create --driver=bridge --attachable --internal=false rabbitmq >> /dev/null 2>&1
 
 # Create shared volumes.
 docker volume create --name=shared_composer_cache >> /dev/null 2>&1
