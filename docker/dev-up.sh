@@ -9,11 +9,7 @@ docker network create --driver=bridge --attachable --internal=false mongodb >> /
 docker volume create --name=shared_composer_cache >> /dev/null 2>&1
 docker volume create --name=shared_yarn_cache >> /dev/null 2>&1
 
-# Run traefik
+# Run services.
 cd ~/.dotfiles/docker/traefik && docker compose up -d && cd - > /dev/null
-
-# Run MySQL 5.7
-cd ~/.dotfiles/docker/mysql57 && docker compose up -d && cd - > /dev/null
-
-# Run MySQL 8.0
-cd ~/.dotfiles/docker/mysql80 && docker compose up -d && cd - > /dev/null
+cd ~/.dotfiles/docker/mysql/5.7 && docker compose up -d && cd - > /dev/null
+cd ~/.dotfiles/docker/mysql/8.0 && docker compose up -d && cd - > /dev/null

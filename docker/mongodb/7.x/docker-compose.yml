@@ -1,7 +1,7 @@
 services:
-  mongodb42:
+  mongodb7:
     image: mongo:7-jammy
-    container_name: mongodb
+    container_name: mongodb7
     ports:
       - "27017:27017"
     volumes:

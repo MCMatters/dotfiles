@@ -1,0 +1,25 @@
+services:
+  elasticsearch:
+    image: elasticsearch:7.17.25
+    container_name: elasticsearch7
+    hostname: elasticsearch7
+    environment:
+      - discovery.type=single-node
+      - bootstrap.memory_lock=true
+      - logger.level=WARN
+      - ES_JAVA_OPTS=-Xms4096m -Xmx4096m
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    volumes:
+      - ./data:/usr/share/elasticsearch/data:delegated
+      - ./config/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml
+
+networks:
+  default:
+    external: true
+    name: elasticsearch

@@ -33,13 +33,13 @@ brew install neovim
 brew install nmap
 brew install openssl@1.1
 brew install openssl@3
+brew install opentofu
 brew install php@8.1
 brew install pinentry
 brew install pinentry-mac
 brew install readline
 brew install sqlite
 brew install sshpass
-brew install terraform
 brew install tmux
 brew install wakeonlan
 brew install wget
@@ -47,7 +47,6 @@ brew install yt-dlp
 brew install zsh
 
 # Casks
-brew install --cask alacritty
 brew install --cask appcleaner
 brew install --cask betterdisplay
 brew install --cask elmedia-player
@@ -65,8 +64,10 @@ brew install --cask obsidian
 brew install --cask postman
 brew install --cask raycast
 brew install --cask steam
+brew install --cask todoist
 brew install --cask transmission
 brew install --cask visual-studio-code
 brew install --cask vlc
+brew install --cask wezterm
 
 brew cleanup
