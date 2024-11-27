@@ -3,8 +3,9 @@ services:
     image: mysql:8.0-debian
     container_name: mysql80
     hostname: mysql80
+    restart: ${DOCKER_RESTART_POLICY:-no}
     env_file:
-      - .docker.env
+      - .env
     ports:
       - "33060:3306"
     volumes:

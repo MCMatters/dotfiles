@@ -4,7 +4,7 @@ services:
     container_name: rabbitmq3
     hostname: rabbitmq3
     env_file:
-      - .docker.env
+      - .env
     ports:
       - "5672:5672"
     volumes:

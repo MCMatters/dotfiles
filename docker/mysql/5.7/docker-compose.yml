@@ -3,8 +3,9 @@ services:
     image: mysql:5.7
     container_name: mysql57
     hostname: mysql57
+    restart: ${DOCKER_RESTART_POLICY:-no}
     env_file:
-      - .docker.env
+      - .env
     ports:
       - "3306:3306"
     volumes:
