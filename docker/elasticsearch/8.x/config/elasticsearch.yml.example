@@ -2,6 +2,7 @@ cluster.name: "docker-cluster"
 network.host: 0.0.0.0
 indices.memory.index_buffer_size: 50%
 xpack.security.enabled: false
+xpack.security.enrollment.enabled: false
 discovery.type: single-node
 bootstrap.memory_lock: true
 logger.level: ERROR
