@@ -1,0 +1,13 @@
+# Ukraine
+[colors]
+#foreground = "#CFE7FB"
+foreground = "#deeff7"
+background = "#0B1A23"
+cursor_bg = "#fcef0c"
+cursor_border = "#fcef0c"
+cursor_fg = "#000000"
+selection_bg = "#4d504c"
+selection_fg = "#f0e04a"
+
+ansi = ["#1b1d1e","#f78820","#fae41e","#f4fd22","#2d78a1","#8fd8f0","#69bbd1","#c6c5bf"]
+brights = ["#505354","#d39c8d","#fff27d","#feed6c","#5bc4e0","#cde7f0","#5ecdfa","#dadbd6"]

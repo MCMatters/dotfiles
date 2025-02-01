@@ -1,0 +1,284 @@
+format = """
+[╭─](bold cyan) $directory${custom.git_status_dirty}${custom.git_status_clean}$git_branch$fill$kubernetes$time
+[╰─](bold yellow) """
+
+[fill]
+symbol = '  '
+
+[git_branch]
+format = '[$branch(:$remote_branch)]($style) '
+
+[kubernetes]
+disabled = false
+format = '[$symbol$context( \($namespace\))]($style) '
+symbol = '󱃾 '
+
+[time]
+disabled = false
+
+[custom]
+disabled = false
+
+[custom.git_status_dirty]
+when = """ [[ -d .git && $(git status -s) != '' ]] """
+format = "[](fg:#DF5241) "
+
+[custom.git_status_clean]
+when = """ [[ -d .git && $(git status -s) == '' ]] """
+format = "[](fg:#73EB78) "
+
+[aws]
+disabled = true
+
+[azure]
+disabled = true
+
+[battery]
+disabled = true
+
+[buf]
+disabled = true
+
+[bun]
+disabled = true
+
+[c]
+disabled = true
+
+[cmake]
+disabled = true
+
+[cobol]
+disabled = true
+
+[cmd_duration]
+disabled = true
+
+[conda]
+disabled = true
+
+[container]
+disabled = true
+
+[crystal]
+disabled = true
+
+[daml]
+disabled = true
+
+[dart]
+disabled = true
+
+[deno]
+disabled = true
+
+[direnv]
+disabled = true
+
+[docker_context]
+disabled = true
+
+[dotnet]
+disabled = true
+
+[elixir]
+disabled = true
+
+[elm]
+disabled = true
+
+[env_var]
+disabled = true
+
+[erlang]
+disabled = true
+
+[fennel]
+disabled = true
+
+[fossil_branch]
+disabled = true
+
+[fossil_metrics]
+disabled = true
+
+[gcloud]
+disabled = true
+
+[git_commit]
+disabled = true
+
+[git_state]
+disabled = true
+
+[git_status]
+disabled = true
+
+[git_metrics]
+disabled = true
+
+[gleam]
+disabled = true
+
+[golang]
+disabled = true
+
+[guix_shell]
+disabled = true
+
+[gradle]
+disabled = true
+
+[haskell]
+disabled = true
+
+[haxe]
+disabled = true
+
+[helm]
+disabled = true
+
+[hostname]
+disabled = true
+
+[java]
+disabled = true
+
+[jobs]
+disabled = true
+
+[julia]
+disabled = true
+
+[kotlin]
+disabled = true
+
+[localip]
+disabled = true
+
+[lua]
+disabled = true
+
+[memory_usage]
+disabled = true
+
+[meson]
+disabled = true
+
+[hg_branch]
+disabled = true
+
+[nats]
+disabled = true
+
+[nim]
+disabled = true
+
+[nix_shell]
+disabled = true
+
+[nodejs]
+disabled = true
+
+[ocaml]
+disabled = true
+
+[odin]
+disabled = true
+
+[opa]
+disabled = true
+
+[openstack]
+disabled = true
+
+[os]
+disabled = true
+
+[package]
+disabled = true
+
+[perl]
+disabled = true
+
+[php]
+disabled = true
+
+[pijul_channel]
+disabled = true
+
+[pulumi]
+disabled = true
+
+[purescript]
+disabled = true
+
+[python]
+disabled = true
+
+[quarto]
+disabled = true
+
+[rlang]
+disabled = true
+
+[raku]
+disabled = true
+
+[red]
+disabled = true
+
+[ruby]
+disabled = true
+
+[rust]
+disabled = true
+
+[scala]
+disabled = true
+
+[shell]
+disabled = true
+
+[shlvl]
+disabled = true
+
+[singularity]
+disabled = true
+
+[solidity]
+disabled = true
+
+[spack]
+disabled = true
+
+[status]
+disabled = true
+
+[sudo]
+disabled = true
+
+[swift]
+disabled = true
+
+[terraform]
+disabled = true
+
+[typst]
+disabled = true
+
+[username]
+disabled = true
+
+[vagrant]
+disabled = true
+
+[vlang]
+disabled = true
+
+[vcsh]
+disabled = true
+
+[zig]
+disabled = true
+

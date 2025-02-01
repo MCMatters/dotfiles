@@ -1,9 +1,7 @@
+setopt HIST_IGNORE_SPACE
+
 if [ -f ~/.zsh_export ]; then
     . ~/.zsh_export
-fi
-
-if [ -f ~/.zsh_aliases ]; then
-    . ~/.zsh_aliases
 fi
 
 if [ -f ~/.zsh_functions ]; then
@@ -16,6 +14,12 @@ source $ZSH/oh-my-zsh.sh
 
 autoload -U +X bashcompinit && bashcompinit
 
-if [ -f /usr/local/bin/terraform ]; then
-    complete -o nospace -C /usr/local/bin/terraform terraform
+export ZSH_THEME_GIT_PROMPT_PREFIX=" %{$fg[yellow]%}("
+export PROMPT='[%D{%K:%M}] %{$fg[green]%}%c%{$reset_color%}$(git_prompt_info) %(!.#.$) '
+
+if [ -f ~/.zsh_aliases ]; then
+    . ~/.zsh_aliases
 fi
+
+eval "$(starship init zsh)"
+eval "$(zoxide init zsh)"
