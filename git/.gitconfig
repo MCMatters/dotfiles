@@ -20,7 +20,7 @@
 	editor = vim
 	autocrlf = input
 	pager = cat
-	excludesFile = ~/.gitignore
+	excludesFile = $HOME/.gitignore
 
 [init]
 	defaultBranch = main

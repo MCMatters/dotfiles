@@ -21,5 +21,9 @@ if [ -f "$HOME/.zsh_aliases" ]; then
     . "$HOME/.zsh_aliases"
 fi
 
+if [ -f "$HOME/.zsh_aliases_custom" ]; then
+    . "$HOME/.zsh_aliases_custom"
+fi
+
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
