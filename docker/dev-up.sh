@@ -12,6 +12,6 @@ docker volume create --name=shared_composer_cache >> /dev/null 2>&1
 docker volume create --name=shared_yarn_cache >> /dev/null 2>&1
 
 # Run services.
-cd ~/.dotfiles/docker/traefik && docker compose up -d && cd - > /dev/null
-cd ~/.dotfiles/docker/mysql/5.7 && docker compose up -d && cd - > /dev/null
-cd ~/.dotfiles/docker/mysql/8.0 && docker compose up -d && cd - > /dev/null
+cd "$HOME/.dotfiles/docker/traefik" && docker compose up -d && cd - > /dev/null
+cd "$HOME/.dotfiles/docker/mysql/5.7" && docker compose up -d && cd - > /dev/null
+cd "$HOME/.dotfiles/docker/mysql/8.0" && docker compose up -d && cd - > /dev/null

@@ -1,9 +1,9 @@
-export ZSH="~/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 export ZSH_THEME="geoffgarside"
 export DISABLE_UPDATE_PROMPT=true
 export DISABLE_AUTO_UPDATE=true
 
-export GOPATH=$HOME/.golang
+export GOPATH="$HOME/.golang"
 
 export CLOUDSDK_PYTHON=python3
 export GPG_TTY=$(tty)

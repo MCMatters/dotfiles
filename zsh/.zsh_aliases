@@ -33,8 +33,8 @@ alias kvr="k8s_vanguard_restart vanguard"
 alias kvrr="k8s_vanguard_restart review-apps"
 
 # Dev
-alias dev-up="sh ~/.dotfiles/docker/dev-up.sh"
-alias dev-stop="sh ~/.dotfiles/docker/dev-stop.sh"
+alias dev-up='sh "$HOME/.dotfiles/docker/dev-up.sh"'
+alias dev-stop='sh "$HOME/.dotfiles/docker/dev-stop.sh"'
 
 # Git
 alias gf="git fetch --all -p --tags"

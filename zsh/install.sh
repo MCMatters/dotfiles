@@ -31,6 +31,8 @@ fi
 
 ZSH_FILES=( ".zshrc" ".zsh_aliases" ".zsh_export" ".zsh_functions" )
 
+rm -rf "$HOME/.zshrc"
+
 for zsh_file in "${ZSH_FILES[@]}"
 do
   if [ ! -f "$HOME/$zsh_file" ]; then
