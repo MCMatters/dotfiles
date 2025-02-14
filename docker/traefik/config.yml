@@ -12,6 +12,10 @@ tls:
         keyFile: "/etc/traefik/certs/_wildcard.loc-key.pem"
 
 http:
+  routers:
+    dashboard:
+      rule: Host(`traefik.loc`)
+      service: api@internal
   middlewares:
     https-redirect:
       redirectscheme:
