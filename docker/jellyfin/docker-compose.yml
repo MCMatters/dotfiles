@@ -11,5 +11,16 @@ services:
       - $PWD/config:/config
       - $PWD/cache:/cache
       - ${JELLYFIN_MEDIA_PATH:-$PWD/media}:/media:ro
-    environment:
-      - JELLYFIN_PublishedServerUrl=http://example.com
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.jellyfin.rule=Host(`jellyfin.loc`)"
+      - "traefik.http.routers.jellyfin.entrypoints=http,https"
+    networks:
+      - default
+      - traefik
+
+networks:
+  default:
+    name: adguard
+  traefik:
+    external: true
