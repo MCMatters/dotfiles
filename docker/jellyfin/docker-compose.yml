@@ -3,7 +3,6 @@ services:
     image: jellyfin/jellyfin
     container_name: jellyfin
     hostname: jellyfin
-    network_mode: host
     restart: ${DOCKER_RESTART_POLICY:-no}
     env_file:
       - .env
@@ -21,6 +20,6 @@ services:
 
 networks:
   default:
-    name: adguard
+    name: jellyfin
   traefik:
     external: true
