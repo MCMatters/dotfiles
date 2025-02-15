@@ -1,0 +1,15 @@
+services:
+  jellyfin:
+    image: jellyfin/jellyfin
+    container_name: jellyfin
+    hostname: jellyfin
+    network_mode: host
+    restart: ${DOCKER_RESTART_POLICY:-no}
+    env_file:
+      - .env
+    volumes:
+      - $PWD/config:/config
+      - $PWD/cache:/cache
+      - ${JELLYFIN_MEDIA_PATH:-$PWD/media}:/media:ro
+    environment:
+      - JELLYFIN_PublishedServerUrl=http://example.com
