@@ -1,6 +1,6 @@
 services:
   traefik:
-    image: traefik:2.10
+    image: traefik:2.11
     container_name: traefik
     restart: ${DOCKER_RESTART_POLICY:-no}
     ports:
