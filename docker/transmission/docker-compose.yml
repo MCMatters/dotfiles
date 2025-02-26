@@ -17,6 +17,7 @@ services:
       - "traefik.enable=true"
       - "traefik.http.routers.transmission.rule=Host(`transmission.loc`)"
       - "traefik.http.routers.transmission.entrypoints=http,https"
+      - "traefik.http.services.transmission.loadbalancer.server.port=9091"
     networks:
       - default
       - traefik
