@@ -1,0 +1,28 @@
+services:
+  transmission:
+    image: lscr.io/linuxserver/transmission:latest
+    container_name: transmission
+    hostname: transmission
+    restart: ${DOCKER_RESTART_POLICY:-no}
+    env_file:
+      - .env
+    volumes:
+      - $PWD/config:/config
+      - ${TRANSMISSION_DOWNLOADS_PATH:-$PWD/downloads}:/downloads
+      - ${TRANSMISSION_WATCH_PATH:-$PWD/watch}:/watch
+    ports:
+      - "51413:51413"
+      - "51413:51413/udp"
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.transmission.rule=Host(`transmission.loc`)"
+      - "traefik.http.routers.transmission.entrypoints=http,https"
+    networks:
+      - default
+      - traefik
+
+networks:
+  default:
+    name: transmission
+  traefik:
+    external: true
